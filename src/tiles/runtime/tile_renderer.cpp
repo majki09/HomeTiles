@@ -636,7 +636,7 @@ bool is_light_entity_id(const String& entity_id) {
   return entity_id.length() >= 6 && entity_id.startsWith("light.");
 }
 
-static int32_t map_gauge_arc_value(float numeric, int32_t min_value, int32_t max_value) {
+static int32_t map_gauge_arc_value(float numeric, float min_value, float max_value) {
   if (max_value <= min_value) {
     min_value = 0;
     max_value = 100;
